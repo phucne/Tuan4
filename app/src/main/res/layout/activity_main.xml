@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <fragment
+        android:id="@+id/fragment"
+        class="com.example.tiki_layout.FramentHeader"
+        android:layout_width="match_parent"
+        android:layout_height="303dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/fragment_frament_header" />
+
+    <fragment
+        android:id="@+id/fragment2"
+        class="com.example.tiki_layout.FramentCenter"
+        android:layout_width="match_parent"
+        android:layout_height="198dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment"
+        tools:ignore="MissingConstraints"
+        tools:layout="@layout/fragment_frament_center" />
+
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="296dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#2196F3"
+        android:text="Tiến Hành Đặt Hàng"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvThanhTien"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:text="Thành Tiền"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvThanhTien"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvThanhTien"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="28dp"
+        android:text="141.800 đ"
+        android:textColor="#D11B1B"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment2" />
+
+    <!--    <fragment-->
+<!--        tools:layout="@layout/fragment_frament_footer"-->
+<!--        android:layout_width="408dp"-->
+<!--        android:layout_height="122dp"-->
+<!--        android:layout_marginStart="4dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        tools:layout_editor_absoluteY="537dp"-->
+<!--        tools:ignore="MissingConstraints">-->
+
+<!--    </fragment>-->
+</androidx.constraintlayout.widget.ConstraintLayout>
